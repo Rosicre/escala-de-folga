@@ -1,13 +1,6 @@
-name: Linting
+name: Automated Tests
 
-on:
-  push:
-    branches:
-      - main
-      - fix/update-dependencies
-  pull_request:
-    branches:
-      - main
+on: pull_request
 
 jobs:
   jest:
@@ -19,6 +12,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/hydrogen"
+      - run: npm ci
 
-      - run: npm ci --legacy-peer-deps
       - run: npm test
