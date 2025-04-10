@@ -1,1 +1,47 @@
-<!doctype html><html lang="pt-br"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Escala Inteligente de Folga</title><link rel="stylesheet" href="styles.css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script><script defer="defer" src="/static/js/main.e1a845d4.js"></script><link href="/static/css/main.f3b66029.css" rel="stylesheet"></head><body><div class="container"><header><h1>Escala Inteligente de Folga</h1></header><section class="filters"><select id="statusFilter"><option value="">Filtrar Status</option><option value="Presente">Presente</option><option value="Atestado">Atestado</option><option value="Folga">Folga</option><option value="Faltou">Faltou</option><option value="Suspenso">Suspenso</option><option value="Banco">Banco</option></select> <button onclick="exportToExcel()">Exportar Excel</button></section><form class="input-group"><input id="nome" placeholder="Nome"/> <input type="date" id="data"/> <input id="turno" placeholder="Turno"/> <select id="status"><option value="Presente">Presente</option><option value="Atestado">Atestado</option><option value="Folga">Folga</option><option value="Faltou">Faltou</option><option value="Suspenso">Suspenso</option><option value="Banco">Banco</option></select> <button type="button" onclick="addRecord()">Adicionar Registro</button></form><div id="recordsContainer"></div></div><script src="app.js"></script><body><div id="root"></div></body></body></html>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Escala Inteligente de Folga</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script defer="defer" src="/static/js/main.e1a845d4.js"></script>
+    <link href="/static/css/main.f3b66029.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>Escala Inteligente de Folga</h1></header>
+      <section class="filters">
+        <select id="statusFilter">
+          <option value="">Filtrar Status</option>
+          <option value="Presente">Presente</option>
+          <option value="Atestado">Atestado</option>
+          <option value="Folga">Folga</option>
+          <option value="Faltou">Faltou</option>
+          <option value="Suspenso">Suspenso</option>
+          <option value="Banco">Banco</option>
+        </select>
+        <button onclick="exportToExcel()">Exportar Excel</button>
+      </section>
+      <form class="input-group">
+        <input id="nome" placeholder="Nome" /> <input type="date" id="data" />
+        <input id="turno" placeholder="Turno" />
+        <select id="status">
+          <option value="Presente">Presente</option>
+          <option value="Atestado">Atestado</option>
+          <option value="Folga">Folga</option>
+          <option value="Faltou">Faltou</option>
+          <option value="Suspenso">Suspenso</option>
+          <option value="Banco">Banco</option>
+        </select>
+        <button type="button" onclick="addRecord()">Adicionar Registro</button>
+      </form>
+      <div id="recordsContainer"></div>
+    </div>
+    <script src="app.js"></script>
+    <body>
+      <div id="root"></div>
+    </body>
+  </body>
+</html>
