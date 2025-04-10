@@ -1,2 +1,80 @@
-body{font-family:Arial,sans-serif;padding:20px}.container,body{margin:0 auto;max-width:1200px}header{margin-bottom:30px;text-align:center}.filters{display:flex}.filters,.input-group{gap:15px;margin-bottom:20px}.input-group{grid-gap:15px;display:grid;grid-template-columns:repeat(4,1fr)}.input-group input,.input-group select{border:1px solid #ccc;border-radius:4px;padding:8px}.card{border-left:4px solid #22c55e;border-radius:8px;box-shadow:0 2px 4px #0000001a;margin-bottom:15px;padding:15px}.card-header{align-items:center;display:flex;justify-content:space-between;margin-bottom:10px}.card-details{color:#666;font-size:.9em}.status-badge{border-radius:4px;font-weight:700;padding:4px 8px}button{border:none;border-radius:4px;cursor:pointer;font-weight:700;padding:8px 16px}button.primary{background:#22c55e;color:#fff}button.danger{background:#ef4444;color:#fff}button.outline{background:#0000;border:1px solid #22c55e;color:#22c55e}@media (max-width:768px){.input-group{grid-template-columns:1fr}}
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.container,
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.filters {
+  display: flex;
+}
+.filters,
+.input-group {
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.input-group {
+  grid-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.input-group input,
+.input-group select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+.card {
+  border-left: 4px solid #22c55e;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #0000001a;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.card-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.card-details {
+  color: #666;
+  font-size: 0.9em;
+}
+.status-badge {
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 4px 8px;
+}
+button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 8px 16px;
+}
+button.primary {
+  background: #22c55e;
+  color: #fff;
+}
+button.danger {
+  background: #ef4444;
+  color: #fff;
+}
+button.outline {
+  background: #0000;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+@media (max-width: 768px) {
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+}
 /*# sourceMappingURL=main.f3b66029.css.map*/
