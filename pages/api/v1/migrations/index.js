@@ -25,15 +25,22 @@ export default async function migrations(request, response) {
     };
 
     if (request.method === "GET") {
-      //console.log("Entrou no GET");
-      const pendingMigrations = await migrationsRunner(
-        defaultMigrationsOptions,
-      );
+      // Captura nomes das migrations pendentes via logger
+      const pendingMigrations = [];
+      await migrationsRunner({
+        ...defaultMigrationsOptions,
+        logger: (msg) => {
+          const match = msg.match(/would run migration (.+?)$/);
+          if (match) {
+            pendingMigrations.push(match[1]);
+          }
+        },
+      });
+
       return response.status(200).json(pendingMigrations);
     }
 
     if (request.method === "POST") {
-      //console.log("Entrou no POST");
       const migrateMigrations = await migrationsRunner({
         ...defaultMigrationsOptions,
         dryRun: false,

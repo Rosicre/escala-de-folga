@@ -1,10 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
-
 exports.shorthands = undefined;
 
 exports.up = (pgm) => {
-  pgm.createTable("test_table", {
+  pgm.createTable("dummy_test_table", {
     id: "id",
     created_at: {
       type: "timestamp",
@@ -14,5 +11,5 @@ exports.up = (pgm) => {
 };
 
 exports.down = (pgm) => {
-  pgm.dropTable("test_table");
+  pgm.dropTable("dummy_test_table");
 };
